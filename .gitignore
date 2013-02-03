@@ -1,0 +1,23 @@
+lib-cov
+*.seed
+*.log
+*.csv
+*.dat
+*.out
+*.pid
+*.gz
+
+# coffeescript only (for now?)
+*.js
+
+# unwanted directories
+pids
+logs
+results
+
+# npm specific exclusions
+node_modules
+npm-debug.log
+
+# weird mac stuff
+.DS_Store
