@@ -1,0 +1,28 @@
+{
+	"name": "steam-account-valuer",
+	"author": "Luke Plaster <notatestuser@gmail.com>",
+	"version": "0.1.0",
+	"description": "Calculates the value of a Steam account using the current R.R.P. values of games.",
+	"homepage": "http://lukep.org",
+	"keywords": ["valve", "steam", "game", "calculator"],
+	"dependencies": {
+		"async": "git://github.com/caolan/async.git",
+		"entities": "0.1.x"
+	},
+	"devDependencies": {
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/notatestuser/node-steam-account-valuer.git"
+	},
+	"licenses": [{
+		"type": "MIT",
+		"url": "http://lp.mit-license.org/"
+	}],
+	"bugs" : {
+		"url" : "http://github.com/notatestuser/node-steam-account-valuer/issues"
+	},
+	"engines": {
+		"node": ">= 0.6.6"
+	}
+}
