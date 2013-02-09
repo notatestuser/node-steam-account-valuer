@@ -39,7 +39,10 @@ handleResponseFn = (pageHtml) ->
 		printGamesAndPrices results
 
 extractGameDataFn = (pageHtml) ->
-	code = pageHtml.match(/var rgGames \= .*\;/g)[0]
+	try
+		code = pageHtml.match(/var rgGames \= .*\;/g)[0]
+	catch err
+		throw "Unable to scrape rgGames global. Is this profile private?"
 	eval code
 	rgGames
 
