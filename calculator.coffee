@@ -1,7 +1,7 @@
 #!/usr/bin/env coffee
 
 unless process.argv.length > 2
-	console.error "Usage: #{process.argv[0] or './calculator'} [steam username]"
+	console.error "Usage: ./calculator.coffee [steam username]"
 	process.exit 1
 
 #####
@@ -14,7 +14,7 @@ async    = require 'async'
 
 accountName       = process.argv[2]
 userGamesUrl      = "http://steamcommunity.com/id/#{accountName}/games/?tab=all"
-concurrentFetches = 6
+concurrentFetches = 10
 priceListDots     = 40
 
 getUrlFn = (url, errorFn, callbackFn) ->
