@@ -61,14 +61,16 @@ buildFetchFns = (gameData = {}) ->
 
 printGamesAndPrices = (products) ->
 	priceSum = 0
+	console.log ""
+	products.sort (a, b) ->
+		a.productName.localeCompare(b.productName)
 	products.map (product) ->
 		if product?
 			line = product.productName
-			for i in [0..(priceListDots - product.productName.length)]
-				line += '.'
+			line += '.' for i in [0..(priceListDots - product.productName.length)]
 			line += product.productPrice
 			console.log line
 			priceSum += parseFloat(product.productPrice.substring(1)) or 0
-	console.log "\nTotal R.R.P. value: #{priceSum}"
+	console.log "\nTotal R.R.P. value: #{priceSum.toFixed(2)} (currency as above)"
 
 getUrlFn userGamesUrl, null, handleResponseFn
